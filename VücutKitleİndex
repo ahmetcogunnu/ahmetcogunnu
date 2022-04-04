@@ -1,0 +1,16 @@
+import java.util.Scanner;
+            //Formül kilo / (boy*boy)
+            public class Main {
+            public static void main(String[] args) {
+             double kilo,boy,endex;
+             Scanner deger = new Scanner(System.in);
+             System.out.print("Kilonuzu(Kg) cinsinden Giriniz   :");
+              kilo = deger.nextDouble();
+              System.out.print("Boyunuzu(Cm) cinsinden Giriniz   :");
+               boy= deger.nextDouble();
+
+               endex = (kilo / (boy *boy));
+               System.out.println("Vücut Kitle Endexiniz    :"+endex);
+
+            }
+        }
