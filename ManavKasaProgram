@@ -1,0 +1,23 @@
+  import java.util.Scanner;
+
+            public class Main {
+            public static void main(String[] args) {
+                Scanner Scan=new Scanner(System.in);
+                int armutkilo,elmakilo,domateskilo,muzkilo,patlicankilo;
+                double armut=2.14 , elma=3.67 , domates=1.11 , muz=0.95 , patlican=5.0,toplam;
+                System.out.print("Armut kac kilo?:");
+                armutkilo= Scan.nextInt();
+                System.out.print("Elma kac kilo?:");
+                elmakilo=Scan.nextInt();
+                System.out.print("Domates kac kilo?:");
+                domateskilo=Scan.nextInt();
+                System.out.print("Muz kac kilo?:");
+                muzkilo=Scan.nextInt();
+                System.out.print("Patlican kac kilo?:");
+                patlicankilo=Scan.nextInt();
+
+                toplam=(elma*elmakilo)+(armut*armutkilo)+(domates*domateskilo)+(muz*muzkilo)+(patlican*patlicankilo);
+                System.out.print("Toplam Tutar: "+toplam);
+
+            }
+        }
