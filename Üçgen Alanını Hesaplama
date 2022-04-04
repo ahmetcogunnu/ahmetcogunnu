@@ -1,0 +1,23 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        double a , b ,c ;
+       // tanımladıktan sonra ise  Kullanıcıdan Verileri alıyorum
+       Scanner girdi = new Scanner(System.in) ;
+       System.out.print("1.ci Kenarını Giriniz    :");
+       a = girdi.nextDouble();
+       System.out.print("2.ci Kenarı Giriniz     :");
+       b = girdi.nextDouble();
+       System.out.print( "3.cü Kenarı Giriniz     :");
+       c = girdi.nextDouble();
+       double top = a+b+c;
+       double cev = 2*top;
+       double u = top/2;
+       System.out.println("u="+cev);
+       double alan = u * (u-a)*(u-b)*(u-c);
+        System.out.println("Alan: "+alan);
+
+    }
+}
