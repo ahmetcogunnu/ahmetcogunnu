@@ -1,0 +1,37 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+
+        String userName, password, newPasword, rebuild;
+        Scanner inp = new Scanner(System.in);
+
+        System.out.print("Kullanıcı adınız    :");
+        userName = inp.nextLine();
+
+        System.out.print("Şifreniz      :");
+        password = inp.nextLine();
+
+        if (userName.equals("patika2") && password.equals("java22")) {
+            System.out.println("Başaralı Giriş Yaptınız!");
+
+        } else {
+            System.out.println("Hatalı Giriş Yaptınız!");
+            System.out.print("Şifrenizi sıfırlamak istiyor Musunuz istiyorsanız 1'e Basınız  :");
+
+        }    newPasword = inp.nextLine();
+
+        if (newPasword.equals("1")){
+            System.out.print("Şifrenizi Yeniden Oluşturunuz    :");
+
+        } else {
+            System.out.print("Hatalı Rakama Bastınız ");
+
+        }  rebuild = inp.nextLine();
+
+        if (rebuild.equals("java33")) {
+            System.out.println("Şifreniz Değiştirilmiştir");
+
+        }
+    }
+}
