@@ -1,0 +1,34 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+
+        int mat, turkçe, fizik, fen, muzik;
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Matematik Notunuz   :");
+        mat = input.nextInt();
+
+        System.out.print("Fizik Notunuz  :");
+        fizik = input.nextInt();
+
+        System.out.print("turkçe Notunuz  :");
+        turkçe = input.nextInt();
+
+        System.out.print("Fen Notunuz  :");
+        fen = input.nextInt();
+
+        System.out.print("Müzik Notunuz  :");
+        muzik = input.nextInt();
+        double avarage = (mat + fizik + turkçe + fen + muzik) / 5;
+        if (avarage <= 55 && avarage>=0) {
+            System.out.println("Sınıfta Kaldınız");
+
+        }else if (avarage >= 55 && avarage<=100 ){
+            System.out.println("Sınıfı Başarıyla Geçtiniz");
+        }
+
+        else {
+            System.out.println("Girilen Değer 0 İle 100 Arasında Değildir");
+        }
+    }
+}
