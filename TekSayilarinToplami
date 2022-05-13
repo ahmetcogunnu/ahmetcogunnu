@@ -1,0 +1,20 @@
+import java.util.Scanner;
+public class Main {
+
+    public static void main(String[] args) {
+        System.out.print("enter A Number  : ");
+        Scanner scn = new Scanner(System.in);
+        int i, total = 0;
+
+        while (true) {
+            i = scn.nextInt();
+            if (i % 4 == 0 && i % 2 == 0) {
+                total += i;
+            } else {
+                System.out.println("Tek Sayı veya 2 ve 4'e ortak bölünmeyen bir sayı girdiniz");
+                i = scn.nextInt();
+                break;
+            }
+        }
+        System.out.println("Girdiğiniz Sayıların Toplamı " + total);
+    }
