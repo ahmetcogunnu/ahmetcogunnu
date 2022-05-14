@@ -1,0 +1,15 @@
+       int sonuc = 1;
+        Scanner giris = new Scanner(System.in);
+        Scanner giris2 = new Scanner(System.in);
+        System.out.println("Bir Taban Giriniz");
+        int sayi = giris.nextInt();
+        System.out.println("Bir Üs Giriniz");
+        int sayi2 = giris2.nextInt();
+
+        for (int i = 1; i <= sayi2; i++) {
+
+            sonuc = sonuc * sayi;
+            System.out.println(+sayi+sayi2+sonuc);
+        }
+    }
+}
