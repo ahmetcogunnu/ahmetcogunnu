@@ -1,0 +1,126 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+    Teacher t1 = new Teacher("Mahmut Hoca", "05050050000","TRH" );
+    Teacher t2 = new Teacher("Grahan","0055","FZK");
+    Teacher t3 = new Teacher("Final","103","FNL");
+
+        Course tarih = new Course("Tarih","101","TRH");
+        tarih.addTeacher(t1);
+
+        Course Fizik = new Course("Fizik","102","FZK");
+        Fizik.addTeacher(t2);
+
+        Course Biyo = new Course("Biyoloji","104","BIO");
+        Biyo.addTeacher(t3);
+
+        Student s1 = new Student("Şaban","5550","12",tarih,Fizik,Biyo);
+        s1.addBulkExamNote(100,100,50);
+        s1.isPass();
+
+
+    }
+}
+ 
+ // 2nd part
+
+public class Student {
+    Course c1;
+    Course c2;
+    Course c3;
+    String name;
+    String stuNo;
+    String classes;
+    Double avarage;
+
+    boolean isPass;
+
+    Student(String name, String stuNo, String classes, Course c1, Course c2, Course c3) {
+        this.name = name;
+        this.stuNo = stuNo;
+        this.classes = classes;
+        this.c1 = c1;
+        this.c2 = c2;
+        this.c3 = c3;
+        this.avarage = 0.00;
+        this.isPass = false;
+
+    }
+
+    void addBulkExamNote(int note1, int note2, int note3) {
+        if (note1 >= 0 && note1 <= 100) {
+            this.c1.note = note1;
+        }
+        if (note2 >= 0 && note2 <= 100) {
+            this.c2.note = note2;
+        }
+        if (note3 >= 0 && note3 <= 100) {
+            this.c3.note = note3;
+        }
+    }
+    void isPass(){
+        this.avarage = (this.c1.note + this.c2.note+this.c3.note) / 3.0;
+        if (this.avarage > 55){
+            System.out.println("Sinifi  Gectiniz");
+        }else {
+            System.out.println("Sinifta Kaldiniz");
+        }
+        printNote();
+    }
+    void printNote(){
+        System.out.println(this.c1.name + "Notu \t:"+this.c1.note  );
+        System.out.println(this.c2.name + "Notu \t:"+this.c2.note  );
+        System.out.println(this.c3.name + "Notu \t:"+this.c3.note  );
+        System.out.println("Ortalamaniz  : "+this.avarage);
+    }
+}
+
+//3rd part
+
+public class Course {
+   Teacher teacher;
+    String name;
+    String code;
+    String prefix;
+    int note;
+    String Teacher;
+    Course(String name,String code,String prefix){
+        this.name = name;
+        this.code = code;
+        this.prefix = prefix;
+        int note = 0;
+    }
+    void addTeacher(Teacher teacher){
+        if (teacher.branch.equals(this.prefix)){
+            this.teacher = teacher;
+
+        }
+
+    }
+    void PrintTeacher(){
+        this.teacher.print();
+
+    }
+
+}
+
+//4th part
+
+public class Teacher {
+    String name;
+    String mpno;
+    String branch;
+
+    Teacher(String name,String mpno,String branch){
+        this.name = name;
+        this.mpno = mpno;
+        this.branch = branch;
+
+    }
+    void print(){
+        System.out.println("Adi : "+ this.name);
+        System.out.println("Telefonu : "+ this.mpno);
+        System.out.println("Bolumu : "+ this.branch);
+    }
+}
+
