@@ -1,0 +1,32 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int adet;
+        int sayi;
+        int minSayi = 0;
+        int maxSayi = 0;
+
+        Scanner input = new Scanner(System.in);
+        System.out.println("Kaç adet sayı gireceksiniz?");
+        adet = input.nextInt();
+
+        for (int i = 1; i <= adet; i++) {
+            System.out.println(i + ". sayıyı girin: ");
+            sayi = input.nextInt();
+
+            if (sayi > maxSayi) {
+                maxSayi = sayi;
+            }
+
+            if (sayi < minSayi || minSayi == 0) {
+                minSayi = sayi;
+            }
+
+        }
+        System.out.println("En küçük sayı: "+minSayi);
+        System.out.println("En büyük sayı: "+maxSayi);
+
+    }
+}
