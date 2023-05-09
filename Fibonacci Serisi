@@ -1,0 +1,17 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int sayi, sayi1=0, sayi2=1;
+        System.out.print("Kaç elemanlı Fibonacci Sayısı istiyorsunuz: : ");
+        sayi = scan.nextInt();
+        System.out.print(sayi + " Elemanlı Fibonacci Seriniz: ");
+        for (int i=1; i<=sayi; i++){
+            System.out.print(sayi1 + " ");
+            int ekle = sayi1 + sayi2;
+            ekle=sayi1+sayi2;
+            sayi1=sayi2;
+            sayi2=ekle;
+        }
+    }
+}
